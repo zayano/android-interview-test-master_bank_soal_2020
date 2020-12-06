@@ -12,6 +12,7 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/filter"
         android:src="@drawable/ic_filter_list_black_24dp"
         android:tint="@android:color/white"
         android:layout_margin="16dp"
