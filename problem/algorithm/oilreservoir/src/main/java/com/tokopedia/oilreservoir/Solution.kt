@@ -5,7 +5,6 @@ package com.tokopedia.oilreservoir
  */
 object Solution {
     fun collectOil(height: IntArray): Int {
-        // TODO, return the amount of oil blocks that could be collected
         // below is stub
         if (height.isEmpty()) return 0
         var left = 0
