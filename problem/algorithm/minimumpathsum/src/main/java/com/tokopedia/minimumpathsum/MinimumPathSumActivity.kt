@@ -3,6 +3,7 @@ package com.tokopedia.minimumpathsum
 import android.os.Bundle
 import android.util.Log
 import android.webkit.WebView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.tokopedia.core.loadFile
 
@@ -14,13 +15,19 @@ class MinimumPathSumActivity : AppCompatActivity() {
         webView.loadFile("minimum_path_sum.html");
 
         // example of how to call the function
-        val number = Solution.minimumPathSum(arrayOf(
-                intArrayOf(1, 2, 1, 9),
-                intArrayOf(1, 5, 1, 1),
-                intArrayOf(4, 2, 1, 1)))
+        val value = arrayOf(
+                intArrayOf(1, 3, 1),
+                intArrayOf(1, 5, 1),
+                intArrayOf(4, 2, 1))
 
-        println(number)
-        Log.d("TAG", "onCreate: $number")
+        val number = Solution.minimumPathSum(value)
+        Log.d("TAG", "Minimum Path Sum: $number")
+
+        val input = findViewById<TextView>(com.tokopedia.resources.R.id.input)
+        input.text = value.contentDeepToString()
+
+        val result = findViewById<TextView>(com.tokopedia.resources.R.id.result)
+        result.text = number.toString()
     }
 
 }
