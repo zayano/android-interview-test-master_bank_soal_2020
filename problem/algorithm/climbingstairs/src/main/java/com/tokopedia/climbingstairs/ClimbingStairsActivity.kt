@@ -1,6 +1,7 @@
 package com.tokopedia.climbingstairs
 
 import android.os.Bundle
+import android.util.Log
 import android.webkit.WebView
 import androidx.appcompat.app.AppCompatActivity
 import com.tokopedia.core.loadFile
@@ -13,6 +14,7 @@ class ClimbingStairsActivity: AppCompatActivity() {
         webView.loadFile("climbing_stairs.html")
 
         // example of how to call the function
-        Solution.climbStairs(10)
+        val value = Solution.climbStairs(3)
+        Log.d("TAG", "onCreate: $value")
     }
 }
